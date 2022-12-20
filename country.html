@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper"> </div>
+    <script>
+          let input = ["America", "Afghanistan", "Boston", "Bahamas", "Conneticut", "Canada",
+            "Denmark", "Denver", "Egypt"]
+
+        let output = {}
+        input.forEach((name)=>{
+            let first = name.toLowerCase().slice(0,1)
+            // console.log(first)
+            if(Object.keys(output).includes(first)){
+                output[first] =[...output[first],name]
+            }
+            else{
+                output[first] = [name]
+            }
+        })
+        console.log(output)
+    </script>
+</body>
+</html>
